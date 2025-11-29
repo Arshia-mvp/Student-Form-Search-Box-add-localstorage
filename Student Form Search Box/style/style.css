@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(160deg, #1e4620, #287233, #3ca34a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(34, 139, 34, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 100, 0, 0.5), inset 0 0 10px rgba(0,100,0,0.2);
+    border: 2px solid rgba(0,128,0,0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-height: 84vh;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,128,0,0.6), inset 0 0 15px rgba(0,128,0,0.3);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.form input {
+    width: 100%;
+    height: 45px;
+    background: rgba(50, 205, 50, 0.9);
+    border: 2px solid rgba(0,128,0,0.8);
+    border-radius: 12px;
+    padding: 12px;
+    color: #003300;
+    font-size: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.35s ease;
+    margin-top: -4px;
+}
+
+.form input::placeholder {
+    color: rgba(0,128,0,0.7);
+}
+
+.form input:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.form input:focus {
+    background: rgba(50, 205, 50, 1);
+    box-shadow: 0 0 15px 5px rgba(50,205,50,0.7), 0 4px 8px rgba(0,0,0,0.3);
+    outline: none;
+    transform: scale(1.03);
+}
+
+.inputsubmit {
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #228B22, #32CD32);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 15px rgba(0,128,0,0.6);
+}
+
+.inputsubmit:hover {
+    background: linear-gradient(135deg, #32CD32, #228B22);
+    box-shadow: 0 0 25px rgba(0,128,0,0.8);
+    transform: translateY(-2px) scale(1.05);
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        padding: 30px 20px;
+        max-width: 95%;
+    }
+    .form input, .inputsubmit {
+        font-size: 15px;
+        padding: 10px;
+        height: 40px;
+    }
+}
+
+#box {
+    margin-top: 20px;
+}
+
+.box {
+    background: #32CD32;
+    border: 2px solid rgba(0,128,0,0.8);
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    color: #003300;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
