@@ -16,7 +16,9 @@ let inputUserAddress = document.querySelector('.useraddressinput');
 
 let searchBox = document.querySelector('#searchBox');
 
-let allUsers = [];
+let allUsers = localStorage.getItem('students') ? JSON.parse(localStorage.getItem('students')) : [];
+
+displayUsers(allUsers);
 
 function displayUsers(users) {
     
@@ -120,7 +122,7 @@ userForm.addEventListener("submit", (e) => {
 
     allUsers.push(user);
 
-    displayUsers(allUsers);
+    localStorage.setItem('students' , JSON.stringify(allUsers));
 
 });
 
@@ -139,8 +141,6 @@ searchBox.addEventListener("input", (e) => {
         user.userAddress.toLowerCase().includes(searchValue)
     
     );
-    
+
     displayUsers(filtered);
-
 });
-
